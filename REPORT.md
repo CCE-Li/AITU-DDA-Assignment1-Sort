@@ -1,7 +1,8 @@
 # REPORT — Fast Sorting & Selection Engine
 
 **Course:** Design and Analysis of Algorithms · **Assignment 1:** Divide and Conquer & Asymptotic Notations
-**Author:** Taubakabyl Nurlybek · **Tag:** v1.0
+**Authors:** Taubakabyl Nurlybek · Li Yixin · **Group:** SE-2526 · **Tag:** v1.0
+**Repository:** <https://github.com/CCE-Li/AITU-DDA-Assignment1-Sort> (branch `main`, tag `v1.0`)
 
 All numbers in this report come from `results.csv`, produced by `mvn exec:java` on the machine
 described in §6. Every value is the **median of five runs**; the JVM is warmed up before measuring.

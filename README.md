@@ -1,5 +1,8 @@
 # AITU DAA Assignment 1 — Fast Sorting & Selection Engine
 
+**Group:** SE-2526 · **Authors:** Taubakabyl Nurlybek, Li Yixin
+**Repository:** <https://github.com/CCE-Li/AITU-DDA-Assignment1-Sort> (branch `main`, tag `v1.0`)
+
 Divide-and-conquer sorting and selection for very large `int[]` arrays: **MergeSort**, **QuickSort**,
 **QuickSelect**, plus the two bonus tasks **Median of Medians** and **Closest Pair of Points**.
 
