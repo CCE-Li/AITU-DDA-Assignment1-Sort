@@ -5,28 +5,11 @@ import kz.aitu.daa.metrics.Metrics;
 import kz.aitu.daa.sort.Partition;
 import kz.aitu.daa.sort.QuickSort;
 
-/**
- * Quickselect: returns the k-th smallest element (0-based) without sorting the whole array.
- *
- * <p>It reuses {@link Partition#threeWay} from quick sort and after every partition continues in the
- * single side that contains position k, so the expected number of comparisons is Θ(n).
- *
- * <p>The loop is iterative on purpose: selection needs no stack at all. Because there is no real
- * recursion, {@link Metrics#maxDepth()} reports the number of partition rounds instead - the depth a
- * naive recursive implementation would have used.
- */
 public final class QuickSelect {
 
     private QuickSelect() {
     }
 
-    /**
-     * @param a       the array to select from; it is partially reordered in place
-     * @param k       position of the wanted element, {@code 0 <= k < a.length}
-     * @param metrics comparison and depth counters
-     * @return the k-th smallest element of {@code a}
-     * @throws IllegalArgumentException if the array is null/empty or k is out of range
-     */
     public static int select(int[] a, int k, Metrics metrics) {
         return select(a, k, new Random(QuickSort.DEFAULT_SEED), metrics);
     }

@@ -2,27 +2,8 @@ package kz.aitu.daa.sort;
 
 import java.util.Random;
 import kz.aitu.daa.metrics.Metrics;
-
-/**
- * Quick sort for {@code int[]} that is safe for very large arrays.
- *
- * <p>Three design decisions keep it out of trouble:
- * <ul>
- *   <li><b>Random pivot</b> - the pivot is drawn uniformly from the current range, so an already
- *       sorted input cannot trigger the quadratic worst case.</li>
- *   <li><b>Smaller side first</b> - only the smaller sub-range is recursed into, the larger one is
- *       handled by the surrounding loop. The recursion depth is therefore O(log n) even in the
- *       worst case, and a {@link StackOverflowError} is impossible for realistic inputs.</li>
- *   <li><b>Three-way partition</b> - values equal to the pivot are grouped in the middle and never
- *       looked at again, so an array of equal values costs Θ(n) instead of Θ(n²).</li>
- * </ul>
- *
- * <p>Average running time is Θ(n log n); the worst case is O(n²) and only occurs with adversarial
- * pivot choices, which the random pivot makes extremely unlikely.
- */
 public final class QuickSort {
 
-    /** Fixed seed so benchmarks and tests are reproducible. */
     public static final long DEFAULT_SEED = 20240920L;
 
     private QuickSort() {
